@@ -1,0 +1,15 @@
+navigate_home:
+  widget_type: navigate
+  dashboard: Home
+  title: Home Panel
+  icon_inactive: mdi-home
+
+navigate_roomba:
+  widget_type: navigate
+  dashboard: Roomba
+  title: Roomba Panel
+  icon_inactive: mdi-roomba
+
+reload_widget:
+  widget_type: reload
+  title: Reload

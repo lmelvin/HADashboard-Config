@@ -1,0 +1,20 @@
+##
+## Main arguments, all optional
+##
+title: Roomba
+widget_dimensions: [120, 120]
+widget_size: [1, 1]
+widget_margins: [5, 5]
+columns: 8
+
+panel_title:
+  widget_type: label
+  text: Roomba Panel
+
+layout:
+  - include: roomba_panel
+  - include: util_widgets
+  - panel_title (2x2), roomba_switch, roomba_battery, roomba_bin_status
+  - 
+  - 
+  - reload_widget, navigate_home

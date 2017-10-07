@@ -1,0 +1,13 @@
+AppDaemon:
+  logsize: 100000
+  log_generations: 3
+  threads: 10
+  cert_verify: false
+  api_port: 5000
+  disable_apps: 1
+  ha_url: !secret hass_local_address
+HASS:
+  ha_url: !secret hass_local_address
+  ha_key: !secret hass_password
+HADashboard:
+  dash_url: !secret dash_local_address

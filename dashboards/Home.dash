@@ -1,0 +1,90 @@
+##
+## Main arguments, all optional
+##
+title: Home
+widget_dimensions: [120, 120]
+widget_margins: [5, 5]
+columns: 7
+
+weather:
+    widget_type: weather
+    units: "&deg;F"
+
+sensor_patio_door:
+    widget_type: binary_sensor
+    entity: binary_sensor.patio_sensor_patio
+    title: Patio Door
+    state_text: 1
+    state_map:
+      "on": Open
+      "off": Closed
+
+sensor_font_door:
+    widget_type: binary_sensor
+    entity: binary_sensor.front_door_sensor_sensor
+    title: Front Door
+    state_text: 1
+    state_map:
+      "on": Open
+      "off": Closed
+
+bedroom_switch:
+    widget_type: switch
+    entity: light.centralite_4257050rzhac_04483b08_1
+    title: Bedroom Lamp
+    icon_on: mdi-lamp
+    icon_off: mdi-lamp
+
+livingroom_tv_switch:
+    widget_type: switch
+    entity: remote.living_room_harmony
+    title: Living Room TV
+    icon_on: mdi-television
+    icon_off: mdi-television
+
+bedroom_tv_switch:
+    widget_type: switch
+    entity: remote.bedroom_harmony
+    title: Bedroom TV
+    icon_on: mdi-television
+    icon_off: mdi-television
+
+office_switch:
+    widget_type: switch
+    entity: switch.office_switch
+    title: Office Lamp
+    icon_on: mdi-lamp
+    icon_off: mdi-lamp
+
+patio_switch:
+    widget_type: switch
+    entity: switch.ge_patio_switch_switch
+    title: Patio Switch
+    icon_on: mdi-lightbulb
+    icon_off: mdi-lightbulb
+
+dani:
+    widget_type: device_tracker
+    device: lucass_iphone
+    title: Dani
+    icon_on: fa-female
+    icon_off: fa-female
+    active_map:
+      - home
+
+luke:
+    widget_type: device_tracker
+    device: samsungsmg935a
+    title: Luke
+    icon_on: fa-male
+    icon_off: fa-male
+    active_map:
+      - home
+
+layout:
+  - include: roomba_panel
+  - include: util_widgets
+  - clock.clock(2x1),                                   sensor_patio_door(1x1),  office_switch,   livingroom_tv_switch,  patio_switch,   luke
+  - sensor.dark_sky_temperature,  climate.living_room,  sensor_font_door(1x1),   bedroom_switch,  bedroom_tv_switch,     roomba_switch,  dani
+  - 
+  - reload_widget, navigate_roomba
