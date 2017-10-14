@@ -1,0 +1,40 @@
+roomba_switch:
+  widget_type: switch
+  entity: vacuum.roomba
+  title: Roomba
+  icon_on: mdi-roomba
+  icon_off: mdi-roomba
+  state_map:
+    "on": "on"
+    "off": "off"
+
+roomba_battery:
+  widget_type: sensor
+  entity: sensor.roomba_battery
+  title: Battery
+
+roomba_status:
+  widget_type: sensor
+  entity: sensor.roomba_status
+  title: Current Status
+
+roomba_return_home:
+  widget_type: script
+  entity: script.roomba_return_home
+  title: Return Home
+  icon_off: mdi-home-map-marker
+  icon_on: mdi-home-map-marker
+
+roomba_runtime:
+  widget_type: sensor
+  entity: sensor.roomba_runtime_today
+  title: Runtime Today
+
+roomba_bin_status:
+  widget_type: binary_sensor
+  title: Bin Status
+  entity: binary_sensor.roomba_bin_full
+  icon_on: mdi-alert-circle
+  icon_off: mdi-checkbox-marked-circle
+  icon_style_active: "color: rgb(255, 0, 85);"
+  icon_style_inactive: "color: rgb(170, 255, 0);"

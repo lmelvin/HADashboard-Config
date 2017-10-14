@@ -81,10 +81,14 @@ luke:
     active_map:
       - home
 
+clock_custom:
+  widget_type: clock
+  time_style: "color: white; font-size: 315%"
+
 layout:
-  - include: roomba_panel
+  - include: roomba_widgets
   - include: util_widgets
-  - clock.clock(2x1),                                   sensor_patio_door(1x1),  office_switch,   livingroom_tv_switch,  patio_switch,   luke
+  - clock_custom(2x1),                                   sensor_patio_door(1x1),  office_switch,   livingroom_tv_switch,  patio_switch,   luke
   - sensor.dark_sky_temperature,  climate.living_room,  sensor_font_door(1x1),   bedroom_switch,  bedroom_tv_switch,     roomba_switch,  dani
   - 
   - reload_widget, navigate_roomba
