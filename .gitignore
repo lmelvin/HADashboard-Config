@@ -3,6 +3,7 @@
 *.csr
 *.crt
 *.key
+*.pyc
 
 *.log
 lib
