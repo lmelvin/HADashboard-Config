@@ -63,6 +63,14 @@ kitchen_switch:
     icon_on: mdi-lightbulb
     icon_off: mdi-lightbulb
 
+truck_garage_door:
+    widget_type: cover
+    entity: cover.truck_garage_door
+    title: 'Truck Garage Door'
+    state_text: 1
+    icon_off: mdi-garage
+    icon_on: mdi-garage-open
+
 mom:
     widget_type: device_tracker
     device: samsungsmg935a_2
@@ -112,4 +120,4 @@ layout:
   - clock_custom(2x1),                          sensor_patio_door(1x1),   hall_switch,    patio_switch,               livingroom_tv_switch,  luke
   - sensor.dark_sky_temperature,  alarm_panel,  sensor_font_door(1x1),    dining_switch,  kitchen_switch,             roomba_switch,         mom
   - spacer(4x1),                                                                          light.bedroom_ceiling_fan,  morning,               night
-  - reload_widget, navigate_roomba
+  - reload_widget, navigate_roomba, truck_garage_door
