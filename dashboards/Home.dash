@@ -73,7 +73,7 @@ truck_garage_door:
 
 mom:
     widget_type: device_tracker
-    device: samsungsmg935a_2
+    device: galaxy_s9_2
     title: Mom
     icon_on: fa-female
     icon_off: fa-female
