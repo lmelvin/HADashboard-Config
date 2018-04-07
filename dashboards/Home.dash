@@ -119,5 +119,5 @@ layout:
   - include: util_widgets
   - clock_custom(2x1),                          sensor_patio_door(1x1),   hall_switch,                patio_switch,       livingroom_tv_switch,  luke
   - sensor.dark_sky_temperature,  alarm_panel,  sensor_font_door(1x1),    dining_switch,              kitchen_switch,     roomba_switch,         mom
-  - spacer(3x1),                                                          light.bedroom_ceiling_fan,  truck_garage_door,  morning,               night
+  - spacer(2x1),                                truck_garage_door,        light.bedroom_ceiling_fan,  light.living_room,  morning,               night
   - reload_widget, navigate_roomba
