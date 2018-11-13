@@ -12,7 +12,7 @@ weather:
 
 sensor_patio_door:
     widget_type: binary_sensor
-    entity: binary_sensor.zwone_patio_door
+    entity: binary_sensor.ecolink_door_patio
     title: Patio Door
     state_text: 1
     state_map:
@@ -21,7 +21,7 @@ sensor_patio_door:
 
 sensor_font_door:
     widget_type: binary_sensor
-    entity: binary_sensor.zwtwo_front_door
+    entity: binary_sensor.ecolink_door_front
     title: Front Door
     state_text: 1
     state_map:
@@ -30,7 +30,7 @@ sensor_font_door:
 
 dining_switch:
     widget_type: switch
-    entity: switch.zwfour_dining_light
+    entity: switch.light_dining
     title: Dining
     icon_on: mdi-lightbulb
     icon_off: mdi-lightbulb
@@ -44,21 +44,21 @@ livingroom_tv_switch:
 
 hall_switch:
     widget_type: switch
-    entity: switch.zwfive_hall_light
+    entity: switch.light_hallway
     title: Hall
     icon_on: mdi-lightbulb
     icon_off: mdi-lightbulb
 
 patio_switch:
     widget_type: switch
-    entity: switch.zwthree_patio_light
+    entity: switch.light_patio
     title: Patio
     icon_on: mdi-lightbulb
     icon_off: mdi-lightbulb
 
 kitchen_switch:
     widget_type: switch
-    entity: switch.zwsix_kitchen_light
+    entity: switch.light_kitchen
     title: Kitchen
     icon_on: mdi-lightbulb
     icon_off: mdi-lightbulb
@@ -118,6 +118,6 @@ layout:
   - include: roomba_widgets
   - include: util_widgets
   - clock_custom(2x1),                               sensor_patio_door(1x1),   hall_switch,                patio_switch,       livingroom_tv_switch,  luke
-  - sensor.dark_sky_temperature, sensor.xiaomi_temp, sensor_font_door(1x1),    dining_switch,              kitchen_switch,     roomba_switch,         spacer(1x1)
+  - sensor.dark_sky_temperature, sensor.xiaomi_temp, sensor_font_door(1x1),    dining_switch,              kitchen_switch,     roomba_switch,         mom
   - alarm_panel,                 spacer(1x1),        truck_garage_door,        light.bedroom_ceiling_fan,  light.living_room,  morning,               night
   - reload_widget, navigate_roomba
